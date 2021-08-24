@@ -1,0 +1,42 @@
+section{
+    width: 70vw;
+    margin-left: 30%;
+    background-color: pink;
+    height: 100%;
+    --auto-grid-min-size: 16rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+}
+
+.card{
+    margin: 0 auto;
+    margin-top: 20px;
+    min-height: 330px;
+    max-height:330px;
+    width:220px;
+    border: 1px solid black;
+    border-radius:5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);                
+}
+
+.div-image{
+    display:flex;
+    justify-content:center;
+    border-radius:50px;
+    width:100px;
+    background-color: white;
+    overflow: hidden;
+    margin:0 auto;
+    position: relative;
+    z-index: 5;
+}
+.card-image{
+    background: rgba(1,1,1,0.1);
+    border-radius:50px;
+    padding: 7px;
+    position:relative;
+    z-index:4;
+    height:100px;
+   
+}

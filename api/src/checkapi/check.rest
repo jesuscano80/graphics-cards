@@ -4,10 +4,10 @@ POST http://localhost:3000/graphics-cards
 Content-Type: application/json
 
 {
-    "name": "Radeon 550 Pulse 2GD5",
-    "brand": "Asus",
-    "price": 845,
-    "image": "https://img.pccomponentes.com/articles/25/257436/sapphire-pulse-radeon-rx-550-2gd5-9295168a-7fb3-4749-b2bd-115aa05f5b6f.jpg",
-    "memory": "2Gb",
-    "frecuence": "1100mhz"
+    "name": "Geforce GTX1050ti",
+    "brand": "Gigabyte",
+    "price": 835,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81VBPk5pnLL._AC_SL1500_.jpg",
+    "memory": "16Gb",
+    "frecuence": "8800mhz"
 }

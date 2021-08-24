@@ -1,0 +1,33 @@
+version: "3.7"
+
+services: 
+    web:
+        container_name: "node"
+        image: web:1.0
+        restart: always
+        build: ./front
+        ports:
+            - 4200:80
+        depends_on: 
+            - mongo
+    api:
+        container_name: "api"
+        image: apirest:1.0
+        restart: always
+        build: ./api/src
+        restart: always
+        environment:
+           - MONGO_URI=mongodb+srv://m001-student:m001-mongodb-basics@cluster0.hewve.mongodb.net/graphics-db?retryWrites=true&w=majority
+        ports:
+            - 3000:3000
+        links:
+            - mongo
+        depends_on:
+            - mongo
+    mongo:
+        container_name: "mymonguito"
+        image: mongo
+        ports:
+            - 27017:27017  
+        volumes: 
+            - /data/dbase
