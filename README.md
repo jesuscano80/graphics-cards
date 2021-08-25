@@ -1,0 +1,24 @@
+# graphics-cards
+Graphics card catalog app
+
+
+This project was generated with Angular 12, tested with Jest, linted with Eslint and dockerized.
+--
+--
+
+## Development server
+
+First run `npm run dev` for listen to api server (first `run npm install` to load dependencies). Then enter front directory `cd front` and execute `ng serve`
+Navigate to `http://localhost:4400/`. The app will automatically reload if you change any of the source files.
+
+## Container - Docker
+
+Run `docker-compose up --build -d` for load it in a docker container, it will render on port 4400.
+
+<br><br>
+
+## Lint
+
+Run `ng lint` to linting the project
+
+## This project is still updating, the information will be expanded as it progresses. Stay in contact! ❤️
