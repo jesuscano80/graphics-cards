@@ -7,7 +7,8 @@ RUN npm install
 COPY . .
 
 EXPOSE 4200
-
+RUN npm i @angular/cli --no-progress --loglevel=error
+RUN npm i --only=production --no-progress --loglevel=error
 RUN npm run build --prod
 
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { Cards } from 'src/app/models/cards';
 import { CardsService } from 'src/app/services/cards.service';
 
@@ -10,7 +11,9 @@ import { CardsService } from 'src/app/services/cards.service';
 export class GraphicsCardListContainerComponent implements OnInit {
 public card:Cards= new Cards("","",0,"","","");
 public cards: Cards[]= [];
-  constructor(private cardsService:CardsService) { }
+public showButton= false;
+private scrollHeight= 500;
+  constructor(@Inject(DOCUMENT) private document: Document,private cardsService:CardsService) { }
 
   ngOnInit(): void {
     this.cardsService.getCards()
@@ -18,6 +21,14 @@ public cards: Cards[]= [];
       this.cards=data.data;
     })
   }
+@HostListener('window:scroll')
+onWindowScroll():void{
+  const yOffSet= window.pageYOffset;
+  const scrollTop= this.document.documentElement.scrollTop;
+  this.showButton= (yOffSet || scrollTop) > this.scrollHeight;
+}
 
-
+onScrollTop():void{
+  this.document.documentElement.scrollTop=0;
+}
 }

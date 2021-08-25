@@ -14,7 +14,7 @@ services:
         container_name: "api"
         image: apirest:1.0
         restart: always
-        build: ./api/src
+        build: .
         restart: always
         environment:
            - MONGO_URI=mongodb+srv://m001-student:m001-mongodb-basics@cluster0.hewve.mongodb.net/graphics-db?retryWrites=true&w=majority
