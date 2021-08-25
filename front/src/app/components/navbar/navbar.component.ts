@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Form } from 'src/app/models/form';
 import { CardsService } from 'src/app/services/cards.service';
 
 @Component({
@@ -9,7 +8,6 @@ import { CardsService } from 'src/app/services/cards.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-public form: Form= new Form("");
 public word: string="";
   constructor(private cardsSvc:CardsService, private router:Router) { }
 
