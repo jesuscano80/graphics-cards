@@ -1,9 +1,10 @@
 <app-spinner></app-spinner>
 
-<section>
+<section infiniteScroll
+(scrolled)="onScrollDown()">
     
 
-<article class="card"  *ngFor="let item of cards">
+<article class="card"  *ngFor="let item of cardsService.cards" (click)="moreData(item._id)">
     
     <div class="card-body" >
         <div class="div-image">
@@ -12,7 +13,7 @@
         </div>
             <p class="name">{{item.name}}</p>
           <div class="card-bottom">
-              
+              {{item.price}},00€
           </div>
             
     </div>

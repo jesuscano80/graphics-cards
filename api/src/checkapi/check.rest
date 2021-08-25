@@ -4,10 +4,15 @@ POST http://localhost:3000/graphics-cards
 Content-Type: application/json
 
 {
-    "name": "Geforce GTX1050ti",
-    "brand": "Gigabyte",
-    "price": 835,
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81VBPk5pnLL._AC_SL1500_.jpg",
-    "memory": "16Gb",
-    "frecuence": "8800mhz"
+    "name": "Quadro x20",
+    "brand": "Asus",
+    "price": 150,
+    "image": "https://i.blogs.es/c4342c/650_1000_gra5/450_1000.jpg",
+    "memory": "4Gb",
+    "frecuence": "8600mhz"
 }
+###
+GET http://localhost:3000/graphics-cards?limite=10
+
+###
+GET http://localhost:3000/graphics-cards?buscar=gef

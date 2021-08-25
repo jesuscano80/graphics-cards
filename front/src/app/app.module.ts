@@ -9,18 +9,24 @@ import { SpinnerModule } from './shared/components/spinner/spinner.module';
 import { SpinnerInterceptor } from './shared/interceptors/spinner.interceptor';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GraphicsCardListContainerComponent } from './components/graphics-card-list-container/graphics-card-list-container.component';
+import {InfiniteScrollModule} from "ngx-infinite-scroll";
+import { FormsModule } from '@angular/forms';
+import { GraphicsCardDetailsComponent } from './components/graphics-card-details/graphics-card-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    GraphicsCardListContainerComponent
+    GraphicsCardListContainerComponent,
+    GraphicsCardDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SpinnerModule
+    SpinnerModule,
+    InfiniteScrollModule,
+    FormsModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true}

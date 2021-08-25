@@ -1,0 +1,48 @@
+section{
+    background-color: #808080;
+    width: 70vw;
+    margin-left: 30%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    color:white;
+    font-family: 'Francois One', sans-serif;
+    font-size:3em;
+
+}
+
+img{
+    max-width:50%;
+    max-height:50%;
+    width:50%;
+    height: 50%;
+    
+}
+
+.flexdiv{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexcolumn{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+}
+.categories{
+    color:white;
+    font-family: 'Francois One', sans-serif;
+    font-size:2em;
+}
+
+.price{
+    font-family: 'Fredoka One', cursive;
+    color: rgb(231, 231, 38);
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #808080;
+    font-size:3em;
+}

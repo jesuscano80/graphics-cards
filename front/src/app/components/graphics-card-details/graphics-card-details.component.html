@@ -1,0 +1,16 @@
+<section>
+    <article *ngFor="let item of cardService.selected">
+        <h1 class="title">{{item.name}}</h1>
+        <div class="flexdiv">
+            <img src="{{item.image}}">
+            <div class="flexcolumn">
+                
+                <p class="categories">brand:<span>{{item.brand}}</span></p>
+                <p class="categories">memory:<span>{{item.memory}}</span></p>
+                <p class="categories">frecuence:<span>{{item.frecuence}}</span></p>
+                <p class="categories">price<span class="price">{{item.price}},00€</span></p>
+            </div>
+        </div>
+    </article>
+</section>
+
