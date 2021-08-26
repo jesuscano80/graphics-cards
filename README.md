@@ -3,10 +3,9 @@ Graphics card catalog app
 
 
 This project was generated with Angular 12, database is Mongodb, api Rest generated with Express framework. Tested with Cypress, linted with Eslint and dockerized.
-- api folder contains api Rest 
-- front folder, angular project.
---
---
+- api folder contains api Rest port 3000. 
+- front folder, angular project, port 4400.
+
 
 ## Development server
 
