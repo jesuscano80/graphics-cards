@@ -15,7 +15,8 @@ Navigate to `http://localhost:4400/`. The app will automatically reload if you c
 
 Run `docker-compose up --build -d` for load it in a docker container, it will render on port 4400.
 
-<br><br>
+##  End to end Test
+Run `npm run open`to load cypress, docker container must be loaded to check tests.
 
 ## Lint
 
