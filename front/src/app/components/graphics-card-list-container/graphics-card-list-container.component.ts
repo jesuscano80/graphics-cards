@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { createOfflineCompileUrlResolver } from '@angular/compiler';
-import { Component, HostListener, Inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cards } from 'src/app/models/cards';
 import { CardsService } from 'src/app/services/cards.service';
@@ -8,7 +8,8 @@ import { CardsService } from 'src/app/services/cards.service';
 @Component({
   selector: 'app-graphics-card-list-container',
   templateUrl: './graphics-card-list-container.component.html',
-  styleUrls: ['./graphics-card-list-container.component.scss']
+  styleUrls: ['./graphics-card-list-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GraphicsCardListContainerComponent implements OnInit {
 public showButton= false;
@@ -44,7 +45,6 @@ moreData(id:string){
   this.cardsService.getById(id).subscribe((data:any)=>{
     this.cardsService.details=true;
     this.cardsService.selected=[data.data];
-    console.log(this.cardsService.selected);
     this.router.navigate(["/details"]);
 
   })

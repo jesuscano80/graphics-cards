@@ -2,8 +2,7 @@ const Graphics = require("../model/Graphics");
 
 const getCards=  async(req,res, next)=>{
     const {buscar}=req.query;
-    console.log(buscar);
-    if(buscar!=undefined){
+      if(buscar!=undefined){
         try{
 
             const busqueda=await Graphics.find({"name":new RegExp(buscar,'i') });
@@ -43,7 +42,6 @@ const postCard = async(req,res, next)=>{
     
     try{
       const {name, brand, price, image, memory, frecuence}= req.body;
-      console.log(req.body);
       const graphicCard= new Graphics({name, brand, price, image, memory, frecuence});
       const graphicSave=await graphicCard.save();
       res.status(200).json({data: graphicSave})  

@@ -1,17 +1,16 @@
+
 section{
     width: 70vw;
     margin-left: 30%;
     background-color:#808080;
     height: 100%;
     --auto-grid-min-size: 16rem;
+    padding-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     row-gap: 1em;
-    padding-bottom: 20px;
 }
-html{
-    background-color:#808080;
-}
+
 
 .card{
     margin: 0 auto;
@@ -74,6 +73,7 @@ html{
     background-color: salmon;
     border: 1px solid #808080;
     transition: all 0.6s ease-in;
+    border-radius:5px;
     &:hover{
         background-color: limegreen;
        

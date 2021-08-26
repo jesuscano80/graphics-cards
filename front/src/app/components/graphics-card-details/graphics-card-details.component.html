@@ -1,16 +1,43 @@
+
 <section>
+  <div class="flexcontainer">   
     <article *ngFor="let item of cardService.selected">
         <h1 class="title">{{item.name}}</h1>
         <div class="flexdiv">
-            <img src="{{item.image}}">
+            
+            <img class="photo" src="{{item.image}}">
             <div class="flexcolumn">
+               
                 
-                <p class="categories">brand:<span>{{item.brand}}</span></p>
-                <p class="categories">memory:<span>{{item.memory}}</span></p>
-                <p class="categories">frecuence:<span>{{item.frecuence}}</span></p>
-                <p class="categories">price<span class="price">{{item.price}},00€</span></p>
+                <div class="specs">
+                    <p class="categories">brand:</p>
+                    <span class="categories">
+                        <ng-container *ngIf="item.brand=='Asus'; else gigabyte">
+                            <img class="logoasus" src="assets/ASUS_Logo.svg.png">
+                        </ng-container>
+                        <ng-template #gigabyte>
+                            <img class="logogyga" src="assets/gigabyte.png">
+                        </ng-template>
+                    </span>
+                    <p class="categories">memory:</p>
+                    <span class="categories">{{item.memory}}</span>
+                    <p class="categories">frecuence:</p>
+                    <span class="categories">{{item.frecuence}}</span>
+                </div>
+                    <p class="categories">price<span class="price">{{item.price}},00€</span></p>
+                
             </div>
         </div>
     </article>
+  </div>
+  <div class="buttonflex">
+          <button class="backbutton" (click)="backToMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1" />
+          </svg>
+    </button>
+</div>
+
 </section>
 
