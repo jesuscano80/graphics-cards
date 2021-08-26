@@ -16,3 +16,6 @@ GET http://localhost:3000/graphics-cards?limite=10
 
 ###
 GET http://localhost:3000/graphics-cards?buscar=gef
+###
+
+GET http://localhost:3000/graphics-cards/61253bac5c31e5090ce6b69e

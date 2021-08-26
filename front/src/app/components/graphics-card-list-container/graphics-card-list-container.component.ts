@@ -1,8 +1,6 @@
 import { DOCUMENT } from '@angular/common';
-import { createOfflineCompileUrlResolver } from '@angular/compiler';
 import { ChangeDetectionStrategy, Component, HostListener, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cards } from 'src/app/models/cards';
 import { CardsService } from 'src/app/services/cards.service';
 
 @Component({

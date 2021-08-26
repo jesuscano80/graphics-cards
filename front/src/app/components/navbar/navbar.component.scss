@@ -14,7 +14,13 @@ section {
     position:fixed;
     margin: 0 auto;
     background-color: salmon;
+    box-shadow: 8px 0 0 8px white;
    
+  }
+  .svgimage{
+    min-height: min-content;
+    overflow-y: hidden;
+    
   }
 
   #logo{

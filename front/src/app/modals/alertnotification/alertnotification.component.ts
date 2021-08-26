@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-alertnotification',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertnotificationComponent implements OnInit {
   public message = '';
-  constructor() { }
+  constructor(private matDialog:MatDialog) { }
 
   ngOnInit(): void {
   }
-
+  closeModal(){
+    this.matDialog.closeAll();
+  }
 }

@@ -39,8 +39,15 @@ $front-theme: mat.define-light-theme((
     padding:0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
+    // overflow-x: auto;
+    // overflow-y: auto;
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; background-color: #808080; }
+body { margin: 0;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      width: calc(100vw - 14px);
+      overflow-x: hidden; 
+    }

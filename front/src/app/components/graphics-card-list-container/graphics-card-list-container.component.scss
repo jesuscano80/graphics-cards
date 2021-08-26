@@ -3,12 +3,12 @@ section{
     width: 70vw;
     margin-left: 30%;
     background-color:#808080;
-    min-height: 100vh;
-    height: 100%;
+    height: 100vh;
     --auto-grid-min-size: 16rem;
     padding-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     row-gap: 1em;
 }
 
@@ -55,7 +55,7 @@ section{
     align-items: center;
     max-height: 100vh;
     max-width:100vw;
-    font-size:3em;
+    font-size:2em;
     font-family: 'Fredoka One', cursive;
     color: rgb(231, 231, 38);
     text-shadow: 0 0 3px #FF0000, 0 0 5px #808080;
