@@ -12,13 +12,17 @@ import { GraphicsCardListContainerComponent } from './components/graphics-card-l
 import {InfiniteScrollModule} from "ngx-infinite-scroll";
 import { FormsModule } from '@angular/forms';
 import { GraphicsCardDetailsComponent } from './components/graphics-card-details/graphics-card-details.component';
+import { AlertnotificationComponent } from './modals/alertnotification/alertnotification.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     GraphicsCardListContainerComponent,
-    GraphicsCardDetailsComponent
+    GraphicsCardDetailsComponent,
+    AlertnotificationComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,9 @@ import { GraphicsCardDetailsComponent } from './components/graphics-card-details
     HttpClientModule,
     SpinnerModule,
     InfiniteScrollModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true}

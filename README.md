@@ -2,7 +2,9 @@
 Graphics card catalog app
 
 
-This project was generated with Angular 12, tested with Jest, linted with Eslint and dockerized.
+This project was generated with Angular 12, database is Mongodb, api Rest generated with Express framework. Tested with Cypress, linted with Eslint and dockerized.
+- api folder contains api Rest 
+- front folder, angular project.
 --
 --
 
